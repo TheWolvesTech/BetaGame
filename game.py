@@ -29,39 +29,46 @@ if __name__ == '__main__':
 
                 select_pc = rd.choice(pc_options)
                 player_select = input("Enter one option : ").lower()
-                
-               
-               
+        
+
+
                #Option 1 : piedra
                 if(player_select == "piedra" and select_pc == "tijera"):
                     print("player win.")
                     acumPlayer +=5
+                    print("player points : ", acumPlayer)
                     if(acumPlayer == 10):
+                        acumPlayer = 0 
                         break
 
 
                 elif(player_select == "piedra" and select_pc == "papel"):
                     print("pc win.")
                     acumPc += 5
+                    print("pc points : ", acumPc)
                     if(acumPc == 10):
+                        acumPc = 0
                         break
 
                 elif(player_select == select_pc):
                     print("draw.")
                 
                
-               
                #Option 2 : papel
                 if(player_select == "papel" and select_pc == "piedra"):
                     print("player win.")
                     acumPlayer+=5
+                    print("player points : ", acumPlayer)
                     if(acumPlayer == 10):
+                        acumPlayer = 0 
                         break
 
                 elif(player_select == "papel" and select_pc == "tijera"):
                     print("pc win.")
                     acumPc+=5
+                    print("pc points : ", acumPc)
                     if(acumPc == 10):
+                        acumPc = 0
                         break
 
                
@@ -69,16 +76,25 @@ if __name__ == '__main__':
                 if(player_select == "tijera" and select_pc == "papel"):
                     print("player win.")
                     acumPlayer+=5
+                    print("player points : ", acumPlayer)
                     if(acumPlayer == 10):
+                        acumPlayer = 0 
                         break
 
                 elif(player_select == "tijera" and select_pc == "piedra"):
                     print("pc win")
                     acumPc += 5
+                    print("pc points : ", acumPc)
                     if(acumPc == 10):
+                        acumPc = 0
                         break
             
-       
        #Starting block
         else:
             print("invalid input.")
+
+
+
+
+
+
